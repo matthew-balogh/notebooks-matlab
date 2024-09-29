@@ -66,3 +66,30 @@ Regardless of the values of $X$ , $Y$ has an *expected value* of 0 and a *varian
 
 
 This is essentially the **standardization** function, which, considering a *normal (Gaussian) distribution* for the RV's, shifts the position of the distribution to be centered around zero and squeezes or stretches it to have a *standard deviation* (and *variance*) of 1, utilizing the arbitrarily choosen statistics, $E\left(X\right)$ and $\textrm{Var}\left(X\right)$ .
+
+# Task 4
+
+*Reformulate the equation and show how an RV with arbitrary mean and variance can be obtained based on a standard Gaussian RV. Verify your insight in Matlab.*
+
+
+Since the *standard Gaussian RV* is $Y$, we need to express $X$ by $Y$ from the equation.
+
+Using the definition of $Y$, $X$ can be expressed by arbitrarily choosen *mean* and *variance* and the *RV* of *Y* itself, denoted as $X_1$, being an example for such a *RV*.
+
+```math
+X=E\left(X\right)+\textrm{Var}\left(X\right)*Y
+```
+
+As for an example RV $X_1$ with *expected value* of 8 and *variance* of 3.5,
+
+```math
+X_1 =E\left(X_1 \right)+\textrm{Var}\left(X_1 \right)*Y=8+3\ldotp 5*Y
+```
+
+Verification through visualizations:
+
+![figure_0.png](mean_and_variance_formatted_media/figure_0.png)
+
+We can see that using 1000 data points as the sample of Y in both of the above samples, by scaling and shifting by the arbitrary statistics of X, we get a close approximation of the PDF associated with the given and desired statistics.
+
+![figure_1.png](mean_and_variance_formatted_media/figure_1.png)
