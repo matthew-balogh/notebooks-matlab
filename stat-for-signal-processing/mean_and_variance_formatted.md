@@ -44,3 +44,16 @@ E\left(Y\right)=\frac{1}{\sqrt{\mathrm{Var}\left(X\right)}}*E\left(X-E\left(X\ri
 ```math
 \mathrm{Var}\left(Y\right)={\left(\frac{1}{\sqrt{\mathrm{Var}\left(X\right)}}\right)}^2 *\mathrm{Var}\left(X\right)=\frac{1}{\mathrm{Var}\left(X\right)}*\mathrm{Var}\left(X\right)=\frac{\mathrm{Var}\left(X\right)}{\mathrm{Var}\left(X\right)}=1
 ```
+
+# Task 3
+
+ *Interpret the resulting random variable* $Y$ .
+
+
+ $Y$ is expressed by the RV of $X$ , for which the participating statistics, that is the *Expected Value (mean)* and the *Variance* can be choosen arbitrarily. Regardless of the values of $X$ , $Y$ has an *expected value* of 0 and a *variance* of 1.
+
+
+Considering a *normal (Gaussian) distribution* for the RV's, $Y$ can be seen as a function which takes an arbitrary RV $X$ as input, and transforms it into a RV with *mean* of 0 and *variance* of 1.
+
+
+This is essentially the **standardization** function, which shifts the position of the distribution to be centered around zero and squeezes or stretches it to have a *standard deviation* (and *variance*) of 1, utilizing the arbitrarily choosen statistics, $E\left(X\right)$ and $\mathrm{Var}\left(X\right)$ .
