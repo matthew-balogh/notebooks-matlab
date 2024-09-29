@@ -1,18 +1,17 @@
-
 #  **Problem Set 1 / Problem 2 \-** *Mean and Variance of Random Variables*
 
-*Given Y* and *X* *random variables (RV)*.
+**Given $Y$ and $X$ random variables (RV).**
 
 
-X has mean and variance of $\mu_X$ and $\sigma_X^2$ , respectively.
+$X$ has mean and variance of $\mu_X$ and $\sigma_X^2$ , respectively.
 
 
-Y is defined as:
+$Y$ is defined as:
 
  $$ Y=\frac{X-E\left(X\right)}{\sqrt{\textrm{Var}\left(X\right)}}=\frac{X-\mu_X }{\sqrt{\sigma_X^2 }} $$ 
 # Task 1
 
- *Analytically compute* $E\left(Y\right)$.
+ **Analytically compute $E\left(Y\right)$.**
 
 
 **Utilizing:**
@@ -34,7 +33,7 @@ E\left(Y\right)=\frac{1}{\sqrt{\textrm{Var}\left(X\right)}}*E\left(X-E\left(X\ri
 
 # Task 2
 
- *Analytically compute* $\textrm{Var}\left(Y\right)$.
+ **Analytically compute $\textrm{Var}\left(Y\right)$.**
 
 
 **Utilizing:**
@@ -56,7 +55,7 @@ b^2 *\textrm{Var}\left(V\right)=\textrm{Var}\left(a+b*V\right)
 
 # Task 3
 
- *Interpret the resulting random variable* $Y$.
+ **Interpret the resulting random variable $Y$.**
 
 
  $Y$ is expressed by the RV of $X$ , for which the participating statistics, that is the *Expected Value (mean)* and the *Variance* can be choosen arbitrarily.
@@ -69,12 +68,10 @@ This is essentially the **standardization** function, which, considering a *norm
 
 # Task 4
 
-*Reformulate the equation and show how an RV with arbitrary mean and variance can be obtained based on a standard Gaussian RV. Verify your insight in Matlab.*
+**Reformulate the equation and show how an RV with arbitrary mean and variance can be obtained based on a standard Gaussian RV. Verify your insight in Matlab.**
 
 
 Since the *standard Gaussian RV* is $Y$, we need to express $X$ by $Y$ from the equation.
-
-Using the definition of $Y$, $X$ can be expressed by arbitrarily choosen *mean* and *variance* and the *RV* of *Y* itself, denoted as $X_1$, being an example for such a *RV*.
 
 ```math
 X=E\left(X\right)+\textrm{Var}\left(X\right)*Y
@@ -88,8 +85,8 @@ X_1 =E\left(X_1 \right)+\textrm{Var}\left(X_1 \right)*Y=8+3\ldotp 5*Y
 
 Verification through visualizations:
 
-![figure_0.png](mean_and_variance_formatted_media/figure_0.png)
+![figure_0.png](problem_1_2_mean_and_variance_media//figure_0.png)
 
-We can see that using 1000 data points as the sample of Y in both of the above samples, by scaling and shifting by the arbitrary statistics of X, we get a close approximation of the PDF associated with the given and desired statistics.
+We can see that using 1000 data points as the sample of $Y$ in both of the above samples, by scaling and shifting by the arbitrary statistics of $X$, we get a close approximation of the PDF associated with the given and desired statistics.
 
-![figure_1.png](mean_and_variance_formatted_media/figure_1.png)
+![figure_1.png](problem_1_2_mean_and_variance_media/figure_1.png)
