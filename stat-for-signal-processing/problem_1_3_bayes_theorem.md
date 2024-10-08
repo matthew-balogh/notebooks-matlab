@@ -16,9 +16,7 @@ B^C=\{\text{person does not have the disease}\}
 
 **(a.1)** $P(B)$
 
-It is given in the description that a patient with the given symptoms has a probability of $0.5$ to **have the disease**.
-
-This knowledge is taken for granted, from cases in the past.
+It is given in the description that a patient with the given symptoms has a probability of $0.5$ to **have the disease**. This knowledge is taken for granted, from cases in the past.
 
 ```math
 P(B)=P(\text{person has the disease})=0.5
@@ -27,9 +25,7 @@ P(B)=P(\text{person has the disease})=0.5
 
 **(a.2)** $P(A|B)$
 
-This is the probability of the patient being **tested positive** if they really **has the disease**.
-
-This is the _True Positive Rate (TPR)_ to which we refer as _sensitivity_. It is given in the description as $0.99$.
+This is the probability of the patient being **tested positive** if they really **has the disease**, that is the _True Positive Rate (TPR)_, to which we refer as _sensitivity_. It is given in the description as $0.99$.
 
 It is an indicator of how well the test procedure performs considering only the patients with the disease based on the previous tests.
 
@@ -40,9 +36,7 @@ P(A|B)=P(\text{test is positive} \ | \ \text{person has the disease})=0.99
 
 **(a.3)** $P(A|B^C)$
 
-This is the probability of the patient being **tested positive** if they **does not have the disease**.
-
-This is the _False Positive Rate (FPR)_. It is given in the description as $0.2$.
+This is the probability of the patient being **tested positive** if they **does not have the disease**, that is the _False Positive Rate (FPR)_. It is given in the description as $0.2$.
 
 ```math
 P(A|B^C)=P(\text{test is positive} \ | \ \text{person doess not have the disease})=0.2
@@ -52,9 +46,7 @@ P(A|B^C)=P(\text{test is positive} \ | \ \text{person doess not have the disease
 
 **(a.4)** $P(A^C|B)$
 
-This is the probability of the patient being **tested negative** if they really **has the disease**.
-
-This is the _False Negative Rate (FNR)_. This is $(1-\text{sensitivity})=0.01$.
+This is the probability of the patient being **tested negative** if they really **has the disease**, that is the _False Negative Rate (FNR)_. This is $(1-\text{sensitivity})=0.01$.
 
 ```math
 P(A^C|B)=P(\text{test is negative} \ | \ \text{person has the disease})=0.01
@@ -137,3 +129,16 @@ P(A|B) = \frac{P(B|A) * P(A)}{P(B)}
 
 With the last equation, we arrive at _Bayes' theorem_, with which, we can find the conditional probability of an event by switching the roles in the original condition (probability of the condition given the event of interest) and using the individual probabilities of both events.
 
+**(d) A critical parameter in this example is the experience of the doctor saying that a person with these symptoms has the disease with probability $0.5$. Derive a formula of $P(B|A)$ as a function of $P(B)$ and sketch it for $P(B) = [0, 1]$. This function fulfills $P(B|A) > P(B)$. What does that mean?**
+
+A function can be built, using the _Bayes' formula_ where $P(B)$ is a free parameter, while $P(A)$ also incorporates $P(B)$, so we need to express those with other formulas.
+
+```math
+P(B|A) = \frac{P(A|B) * P(B)}{P(A)}
+```
+
+The objective is to see, how the probability of a positive test while having the disease changes as the doctor's opinion changes.
+
+![](./problem_1_3_bayes_theorem_media/figure_0.png)
+
+The function indeed fulfills $P(B|A) > P(B)$. Given the doctor's confidence level on the connection between the symptoms and the disease, whatever low that is, issuing a test yields significantly better confidence level, than just relying on the doctor's opinion.
